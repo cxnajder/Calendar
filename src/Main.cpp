@@ -1,5 +1,5 @@
 #include <iostream>
-#include "lib/Date/Date.h"
+#include "Date.h"
 
 
 void PrintDate(const Date::Date & d)
