@@ -16,9 +16,13 @@ void PrintEvent(const Calendar::Event & ev)
 
 }
 
+
 int main()
 {
-    /*
+
+    std::cout << "Calendar running...\n";
+
+    
     try
     {
         Date::Date d1(29, 2, 2000);
@@ -33,12 +37,31 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    */
+    
 
-    Calendar::Event event("Test", "This is a test.");
-    PrintEvent(event);
+    
+    
+    std::cout << "\nCreate 3 events in a day:\n\n";
 
 
+    Calendar::Day d;
+    d.addEvent("Test EVENT", "This is a test EVENT.");
+    d.addEvent("Test EVENT 2", "This is a 2nd test EVENT.");
+    d.addEvent("Test EVENT 3", "This is a 3rd test EVENT.");
+
+    auto d_events = d.getEvents();
+    for( Calendar::Event ev : d_events)
+        PrintEvent(ev);
+    
+    std::cout << "\nDelete events 2 and 1:\n\n";
+
+    d.deleteEvent(2);    
+    d.deleteEvent(1);
+
+    d_events = d.getEvents();
+    for( Calendar::Event ev : d_events)
+        PrintEvent(ev);
+    
     
     return 0;
 }
