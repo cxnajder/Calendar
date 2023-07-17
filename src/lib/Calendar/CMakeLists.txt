@@ -5,8 +5,10 @@ target_link_libraries(Calendar PUBLIC CalendarEvent)
 target_link_libraries(Calendar PUBLIC CalendarDay)
 target_link_libraries(Calendar PUBLIC CalendarMonth)
 target_link_libraries(Calendar PUBLIC CalendarYear)
+target_link_libraries(Calendar PUBLIC Date)
 target_include_directories(
     Calendar PUBLIC
     "${PROJECT_BINARY_DIR}/lib/Calendar"
     "${PROJECT_SOURCE_DIR}/lib/Calendar/includes"
+    "${PROJECT_SOURCE_DIR}/lib/Date"
 )
