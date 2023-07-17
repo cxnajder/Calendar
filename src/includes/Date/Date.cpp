@@ -50,17 +50,6 @@ namespace Date
 
 
 
-    Exception::Exception() {}
-    Exception::Exception( const std::string & desc ) : description(desc) {}
-
-    std::string Exception::what() const 
-    { return description; }
-
-    void Exception::setWhat( const std::string & desc ) 
-    { description = desc; }
-
-
-
     Month::Month(Month::MonthName n): m_name(n) {}
 
     Month::Month(int m_number)
