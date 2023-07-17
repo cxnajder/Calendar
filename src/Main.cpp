@@ -65,7 +65,6 @@ int main()
     
 
 
-
     std::cout << "\nMonth tests:\n\n";
     
     Calendar::Month jan(1);
@@ -74,10 +73,32 @@ int main()
     std::cout << jan_days.size() << '\n';
 
 
-    Calendar::Month feb(2);
+    Calendar::Month feb1(2, false);
 
-    auto feb_days = feb.getDays();
-    std::cout << feb_days.size() << '\n';
+    auto feb1_days = feb1.getDays();
+    std::cout << feb1_days.size() << '\n';
+
+
+    Calendar::Month feb2(2, true);
+
+    auto feb2_days = feb2.getDays();
+    std::cout << feb2_days.size() << '\n';
+
+
+    std::cout << "\nYear tests:\n\n";
+
+    Calendar::Year y1(2000);
+
+    std::cout << y1.getMonths().at(1).getDays().size() << '\n';
+    std::cout << y1.isLeap() << '\n';
+
+        Calendar::Year y2(2001);
+    
+    std::cout << y2.getMonths().at(1).getDays().size() << '\n';
+    std::cout << y2.isLeap() << '\n';
+
+
+
 
     return 0;
 }

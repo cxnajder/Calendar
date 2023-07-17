@@ -7,6 +7,7 @@ namespace Calendar
     {
     public:
         Month(int);
+        Month(int, bool);
         int getValue() const;
         std::vector<Day> getDays() const;
 

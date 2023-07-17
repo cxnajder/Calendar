@@ -4,6 +4,7 @@ add_subdirectory(includes)
 target_link_libraries(Calendar PUBLIC CalendarEvent)
 target_link_libraries(Calendar PUBLIC CalendarDay)
 target_link_libraries(Calendar PUBLIC CalendarMonth)
+target_link_libraries(Calendar PUBLIC CalendarYear)
 target_include_directories(
     Calendar PUBLIC
     "${PROJECT_BINARY_DIR}/lib/Calendar"
