@@ -4,42 +4,13 @@
 #include <array>
 
 #include "DateException.h"
+#include "DateYear.h"
+#include "DateMonth.h"
 
 
 namespace Date
 {
 
-
-    class Month
-    {
-    public:
-        enum class MonthName {
-            jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
-        };
-
-        Month(Month::MonthName n);
-        Month(int);
-
-        int getValue() const;
-
-    private: 
-        Month::MonthName m_name;
-        bool isValid(int);
-    };
-
-
-    class Year
-    {
-    public:
-        Year(int);
-        int getValue() const;
-        bool isLeap() const;
-    private:
-        int value;
-        static const int max_year = 2300;
-        static const int min_year = 1800;
-        bool isValid(int) const;
-    };    
 
 
     class Day

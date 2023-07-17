@@ -1,1 +1,5 @@
 add_library(DateException DateException.h DateException.cpp)
+add_library(DateYear DateYear.h DateYear.cpp)
+add_library(DateMonth DateMonth.h DateMonth.cpp)
+target_link_libraries(DateYear PUBLIC DateException)
+target_link_libraries(DateMonth PUBLIC DateException)
