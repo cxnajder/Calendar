@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Date.h"
+#include "Calendar.h"
+
 
 
 void PrintDate(const Date::Date & d)
@@ -8,8 +10,15 @@ void PrintDate(const Date::Date & d)
 
 }
 
+void PrintEvent(const Calendar::Event & ev)
+{
+    std::cout << ev.getTitle() << '\n' << ev.getDescription() << '\n';
+
+}
+
 int main()
 {
+    /*
     try
     {
         Date::Date d1(29, 2, 2000);
@@ -24,6 +33,11 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
+    */
+
+    Calendar::Event event("Test", "This is a test.");
+    PrintEvent(event);
+
 
     
     return 0;

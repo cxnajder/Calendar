@@ -1,0 +1,1 @@
+add_library(CalendarEvent CalEvent.h CalEvent.cpp)
