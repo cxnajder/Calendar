@@ -61,7 +61,23 @@ int main()
     d_events = d.getEvents();
     for( Calendar::Event ev : d_events)
         PrintEvent(ev);
+    //
     
+
+
+
+    std::cout << "\nMonth tests:\n\n";
     
+    Calendar::Month jan(1);
+
+    auto jan_days = jan.getDays();
+    std::cout << jan_days.size() << '\n';
+
+
+    Calendar::Month feb(2);
+
+    auto feb_days = feb.getDays();
+    std::cout << feb_days.size() << '\n';
+
     return 0;
 }

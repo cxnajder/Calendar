@@ -1,3 +1,5 @@
 add_library(CalendarEvent CalEvent.h CalEvent.cpp)
 add_library(CalendarDay CalDay.h CalDay.cpp)
 target_link_libraries(CalendarDay PRIVATE CalendarEvent)
+add_library(CalendarMonth CalMonth.h CalMonth.cpp)
+target_link_libraries(CalendarMonth PRIVATE CalendarDay)
