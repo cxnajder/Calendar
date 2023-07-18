@@ -1,0 +1,1 @@
+add_library(DateUtilities DateUtilities.h DateUtilities.cpp)

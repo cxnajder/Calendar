@@ -1,57 +1,13 @@
 #include <iostream>
-#include "Date.h"
-#include "Calendar.h"
-
+#include "DateUtilities.h"
 
 int main()
 {
-    Calendar::Calendar new_cal;
-
-    std::cout << "Year : " <<
-        new_cal
-            .getYear()
-            .getValue()
-        << '\n';
-    //
-    std::cout << "Number of months in a year : " <<
-        new_cal
-            .getYear()
-            .getMonths()
-            .size()
-        << '\n';
-    //
-    for(int i = 1; i <= 12; ++i)
-    {
-        std::cout << "Number of days in " << i;
-
-        switch (i)
-        {
-        case 1:
-            std::cout << "st ";
-            break;
-        case 2:
-            std::cout << "nd ";
-            break;
-        case 3:
-            std::cout << "rd ";
-            break;
-        default:
-            std::cout << "th ";
-            break;
-        }
-        std::cout << "month : " <<
-            new_cal
-                .getYear()
-                .getMonths()
-                .at(i - 1)
-                .getDays()
-                .size()
-            << '\n';
-        //
-    }
-
-    
-
-    
+    int y = 2000;
+    std::cout << DateUtilities::isLeapYear(y) << '\n';
+    std::cout << DateUtilities::days_of_month.size() << '\n';
+    std::cout << DateUtilities::days_of_month[2] << '\n';
+    std::cout << DateUtilities::isValidModernYear(1900) << '\n';
+    std::cout << DateUtilities::isValidModernYear(1899) << '\n';
     return 0;
 }
