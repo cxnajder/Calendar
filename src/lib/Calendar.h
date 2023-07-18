@@ -1,25 +1,25 @@
 #pragma once
 
-#include "CalYear.h"
 #include "Date.h"
+#include "CalendarElements.h"
 
-namespace Calendar
+
+namespace my
 {
-
     class Calendar
     {
     public:
         Calendar();
         ~Calendar();
-        Year getYear() const;
+        CalendarElement::Year * getYear();
+        my::Date getTodaysDate() const;
 
     private:
-        Year * year;
-        Date::Date * today;
+        CalendarElement::Year * year;
+        my::Date * today;
 
         const Calendar & operator=(const Calendar &) = delete;
         Calendar(const Calendar &) = delete;
         
     };
-
 }

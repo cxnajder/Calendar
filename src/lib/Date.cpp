@@ -3,7 +3,7 @@
 #include "MyException.h"
 
 
-namespace Date
+namespace my
 {
     
     Date::Date(int d, int m, int y)

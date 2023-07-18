@@ -10,6 +10,7 @@ namespace DateUtilities
     bool isValidModernYear(const int&);
     bool isValidMonth(const int&);
     bool isValidMonthDay(const int&, const int&, const int&);
-    int daysOfMonth(const int&, const int&, const int&);
+    int daysOfMonth(const int&, const int&);
+    int daysOfMonth(const int&, const bool);
 
 }

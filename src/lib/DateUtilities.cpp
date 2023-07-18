@@ -51,12 +51,23 @@ namespace DateUtilities
     }
 
 
-    int daysOfMonth(const int & day, const int & month, const int & year)
+    int daysOfMonth(const int & month, const int & year)
     {
         if (!isValidMonth(month))
             throw my::exception("daysOfMonth(): invalid input (month)");
             
         if (isLeapYear(year) && month == 2)
+            return 29;
+        return days_of_month[month];
+    }
+
+
+    int daysOfMonth(const int & month, const bool leapYear)
+    {
+        if (!isValidMonth(month))
+            throw my::exception("daysOfMonth(): invalid input (month)");
+            
+        if (leapYear && month == 2)
             return 29;
         return days_of_month[month];
     }

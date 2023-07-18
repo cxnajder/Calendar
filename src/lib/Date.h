@@ -1,6 +1,6 @@
 #pragma once 
 
-namespace Date
+namespace my
 {
     class Date
     {
