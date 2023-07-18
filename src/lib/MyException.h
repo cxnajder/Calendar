@@ -1,10 +1,19 @@
-#pragma once
-#include <exception>
+#ifndef MY_EXCEPTION__
+#define MY_EXCEPTION__
 
-namespace My
+#include <stdexcept>
+#include <string>
+
+namespace my
 {
-    class Exception : public std::runtime_error
+    class exception: public std::runtime_error
     {
-        Exception(const std::string &)
+    public:
+        exception(const std::string &);
     };
+
+    void throwRuntime(const std::string &, const std::string &);   
+    
 }
+
+#endif

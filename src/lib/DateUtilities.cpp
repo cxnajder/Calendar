@@ -1,4 +1,5 @@
 #include "DateUtilities.h"
+#include "MyException.h"
 
 namespace DateUtilities
 {
@@ -39,6 +40,9 @@ namespace DateUtilities
 
     bool isValidMonthDay(const int & day, const int & month, const int & year)
     {
+        if (!isValidMonth(month))
+            throw my::exception("isValidMonthDay(): invalid input (month)");
+        
         if (day <= days_of_month[month])
             return true;
         if (isLeapYear(year) && month == 2 && day == 29)
@@ -49,6 +53,9 @@ namespace DateUtilities
 
     int daysOfMonth(const int & day, const int & month, const int & year)
     {
+        if (!isValidMonth(month))
+            throw my::exception("daysOfMonth(): invalid input (month)");
+            
         if (isLeapYear(year) && month == 2)
             return 29;
         return days_of_month[month];
