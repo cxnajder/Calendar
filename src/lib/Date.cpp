@@ -1,5 +1,6 @@
 #include "Date.h"
 #include "DateUtilities.h"
+#include "MyException.h"
 
 
 namespace Date
@@ -14,7 +15,9 @@ namespace Date
             day = d;
             month = m;
             year = y;
-        }
+        } 
+        else
+            throw my::exception("Date(): invalid input");
     }
 
     int Date::getDay() const 
