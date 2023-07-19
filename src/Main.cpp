@@ -38,12 +38,7 @@ int main()
 
     
     my::Calendar cal;
-    /*
-    terminate called after throwing an instance of 'my::exception'
-    what():  Month(): invalid input (month)
-    Aborted (core dumped)
-    */
-
+    
     
     my::Date today = cal.getTodaysDate(); 
     // it will return harcoded 1.1.2000 for now
