@@ -35,7 +35,7 @@ namespace CalendarElement
 
     void Day::deleteEvent(std::size_t index)
     {
-        if(index <= 0 || index > events.size());
+        if(index <= 0 || index > events.size())
             throw my::exception("Day::deleteEvent(): invalid iput (index)");
 
         auto it = events.begin() + index-1;
@@ -48,7 +48,7 @@ namespace CalendarElement
 
     Event & Day::operator[](std::size_t index)
     {
-        if(index < 1 || index > events.size());
+        if(index < 1 || index > events.size())
             throw my::exception("Day[]: invalid input (index)");
 
         return events[index -1];
@@ -61,7 +61,7 @@ namespace CalendarElement
     Month::Month(int month, bool leap)
         : itsLeapYear(leap)
     {
-        if(month < 1 || month > 12);
+        if(month < 1 || month > 12)
             throw my::exception("Month(): invalid input (month)");
 
         this->value = month;
