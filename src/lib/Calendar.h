@@ -6,20 +6,18 @@
 
 namespace my
 {
-    class Calendar
+
+    class Calendar : public CalendarElement::Year
+    // Calendar is kind of a Year (is for specific year, contains months and all methods seting them)
+    // that also contains today's date.
     {
     public:
-        Calendar();
-        ~Calendar();
-        CalendarElement::Year * getYear();
+        Calendar(my::Date);
         my::Date getTodaysDate() const;
 
     private:
-        CalendarElement::Year * year;
-        my::Date * today;
-
-        const Calendar & operator=(const Calendar &) = delete;
-        Calendar(const Calendar &) = delete;
+        my::Date today;
         
     };
+
 }

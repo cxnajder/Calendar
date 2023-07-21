@@ -2,23 +2,10 @@
 
 namespace my
 {
-    Calendar::Calendar()
-    {
-        year = new CalendarElement::Year(2000);
-        today = new my::Date(1, 1, 2000);
-    }
-    Calendar::~Calendar()
-    {
-        delete today;
-        delete year;
-    }
+    Calendar::Calendar(my::Date today_)
+        : Year(today_.getYear()), today(today_)
+    {}
 
-    CalendarElement::Year * Calendar::getYear()
-    {
-        return year;
-    }
-
-
-        my::Date Calendar::getTodaysDate() const
-        { return *today; }
+    my::Date Calendar::getTodaysDate() const
+        { return today; }
 }

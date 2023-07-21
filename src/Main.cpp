@@ -37,7 +37,7 @@ int main()
     std::cout << year[2][29][1].getDescription() << '\n';
 
     
-    my::Calendar cal;
+    my::Calendar cal({2, 2, 2000});
     
     
     my::Date today = cal.getTodaysDate(); 
@@ -47,9 +47,9 @@ int main()
     std::cout << today.getYear() << '\n';
     
 
-    (*cal.getYear())[1][1].addEvent("Test calendar", "wow! that thing works???");
-    std::cout << (*cal.getYear())[1][1][1].getTitle() << '\n';
-    std::cout << (*cal.getYear())[1][1][1].getDescription() << '\n';
+    cal[1][1].addEvent("Test calendar", "wow! that thing works???");
+    std::cout << cal[1][1][1].getTitle() << '\n';
+    std::cout << cal[1][1][1].getDescription() << '\n';
 
     return 0;
 }

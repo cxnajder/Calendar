@@ -54,14 +54,14 @@ namespace CalendarElement
         Year(int);
         int getValue() const;
         std::vector<Month> getMonths() const;
-        bool isLeap() const;
         Month & operator[](std::size_t);
 
+    protected:
+        std::vector<Month> months;
+        void setMonths(bool);
+        
     private:
         int value;
-        std::vector<Month> months;
-
-        void setMonths(bool);
     };
 
 }
