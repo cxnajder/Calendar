@@ -120,7 +120,6 @@ namespace CalendarElement
 
     void Year::setMonths(bool leapYear)
     {
-        months;
 
         for(int month_num = 1; month_num <= 12; ++month_num)
         {

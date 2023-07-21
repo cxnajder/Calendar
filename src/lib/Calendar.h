@@ -2,22 +2,24 @@
 
 #include "Date.h"
 #include "CalendarElements.h"
+#include <vector>
 
 
 namespace my
 {
 
-    class Calendar : public CalendarElement::Year
-    // Calendar is kind of a Year (is for specific year, contains months and all methods seting them)
-    // that also contains today's date.
+    class Calendar
     {
     public:
         Calendar(my::Date);
         my::Date getTodaysDate() const;
+        CalendarElement::Month & operator[](std::size_t);
 
     private:
+        int currentYear;
         my::Date today;
+        std::vector<CalendarElement::Month> months;
+        void setMonths(bool);
         
     };
-
 }
