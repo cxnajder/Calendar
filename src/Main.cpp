@@ -2,6 +2,8 @@
 #include "DateUtilities.h"
 #include "Date.h"
 #include "Calendar.h"
+#include "CalendarDisplayer.h"
+
 
 int main()
 {
@@ -50,6 +52,13 @@ int main()
     cal[1][1].addEvent("Test calendar", "wow! that thing works???");
     std::cout << cal[1][1][1].getTitle() << '\n';
     std::cout << cal[1][1][1].getDescription() << '\n';
+
+
+    cal[1][1].addEvent("Test calendar 2", "some description");
+    cal[12][24].addEvent("It's Christmas!!!", "!!");
+
+    Calendar::Displayer * calDisplayer = new Calendar::ConsoleDisplayer;
+    calDisplayer->displayCal(cal);
 
     return 0;
 }

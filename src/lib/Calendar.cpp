@@ -24,9 +24,14 @@ namespace my
     CalendarElement::Month & Calendar::operator[](std::size_t index)
     {
         if(index < 1 || index > 12)
-            throw my::exception("Year[]: invalid input (index)");
+            throw my::exception("Calendar[]: invalid input (index)");
 
         return months[index-1];
+    }
+
+    int Calendar::getCurrentYear() const
+    {
+        return currentYear;
     }
 
 

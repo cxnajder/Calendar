@@ -16,3 +16,7 @@ target_link_libraries(Calendar PUBLIC Date)
 target_link_libraries(Calendar PUBLIC CalendarElements)
 target_link_libraries(CalendarElements PUBLIC MyException)
 target_link_libraries(CalendarElements PUBLIC DateUtilities)
+
+
+add_library(CalendarDisplayer CalendarDisplayer.h CalendarDisplayer.cpp)
+target_link_libraries(CalendarDisplayer PUBLIC Calendar)
