@@ -59,6 +59,7 @@ int main()
 
     Calendar::Displayer * calDisplayer = new Calendar::ConsoleDisplayer;
     calDisplayer->displayCal(cal);
+    delete calDisplayer;
 
     return 0;
 }
