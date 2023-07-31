@@ -27,6 +27,8 @@ namespace CalendarElement
         void deleteEvent(std::size_t);
         std::vector<Event> getEvents() const;
         Event & operator[](std::size_t);
+        std::size_t size() const;
+
     private:
         std::vector<Event> events;
     };
@@ -40,6 +42,7 @@ namespace CalendarElement
         int getValue() const;
         std::vector<Day> getDays() const;
         Day & operator[](std::size_t);
+        std::size_t size() const;
 
     private:
         std::vector<Day> days;

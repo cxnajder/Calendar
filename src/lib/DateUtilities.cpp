@@ -69,7 +69,7 @@ namespace DateUtilities
             
         if (leapYear && month == 2)
             return 29;
-        return days_of_month[month];
+        return days_of_month[month-1];
     }
 
 }

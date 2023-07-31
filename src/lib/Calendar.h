@@ -14,6 +14,7 @@ namespace my
         Calendar(my::Date);
         my::Date getTodaysDate() const;
         CalendarElement::Month & operator[](std::size_t);
+        int getCurrentYear() const;
 
     private:
         int currentYear;

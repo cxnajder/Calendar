@@ -54,6 +54,8 @@ namespace CalendarElement
         return events[index -1];
     }
 
+    std::size_t Day::size() const 
+    { return events.size(); }
 
 
 
@@ -87,6 +89,9 @@ namespace CalendarElement
 
         return days[index-1];
     }
+
+    std::size_t Month::size() const 
+    { return days.size(); }
 
 
 
